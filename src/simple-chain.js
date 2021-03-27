@@ -23,9 +23,9 @@ const chainMaker = {
     return this
   },
   finishChain() {
-    let Arr = [...this.arr];
+    let Array = [...this.arr];
     this.arr.length = 0;
-    return Arr.join('~~');
+    return Array.join('~~');
   }
 };
 
