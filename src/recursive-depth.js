@@ -6,8 +6,8 @@ module.exports = class DepthCalculator {
       if (arr.length == 0) {
         return 1;
       }
-      return 1 + (Math.max(...arr.map(ar => {
-        return this.calculateDepth(ar)
+      return 1 + (Math.max(...arr.map(n => {
+        return this.calculateDepth(n)
       })))
     } else {
       return 0;
