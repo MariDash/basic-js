@@ -20,6 +20,7 @@ function deleteDigit(n) {
     arrDublicate.splice(index, 1);
     newArr.push(arrDublicate.join(""));
   });
+  newArr.sort((a, b) => b - a)[0];
   return +newArr.sort((a, b) => b - a)[0];
 }
 
