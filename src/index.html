@@ -7,62 +7,6 @@
     <title>Document</title>
   </head>
   <body>
-    <script>
-      function encodeLine(str) {
-        let result = [];
-        str = Array.from(str);
-        let i = 0;
-        while (i < str.length) {
-          console.log(i, "i");
-          let sum = 0;
-          if (str[i] == str[i + 1]) {
-            sum += 2;
-            if (str[i] == str[i + 2]) {
-              sum += 1;
-              if (str[i] == str[i + 3]) {
-                sum += 1;
-              }
-            }
-          }
-          console.log(sum, "sum");
-
-          if (sum == 0) {
-            result.push(str[i]);
-            i++;
-          } else {
-            result.push(sum);
-            result.push(str[i]);
-            i = i + sum;
-          }
-        }
-        // for (let i = 0; i < str.length; i) {
-        //   console.log(i, "i");
-        //   let sum = 0;
-        //   if (str[i] == str[i + 1]) {
-        //     sum += 2;
-        //     if (str[i] == str[i + 2]) {
-        //       sum += 1;
-        //       if (str[i] == str[i + 3]) {
-        //         sum += 1;
-        //       }
-        //     }
-        //   }
-        //   console.log(sum, "sum");
-
-        //   if (sum == 0) {
-        //     result.push(str[i]);
-        //   } else {
-        //     result.push(sum);
-        //     result.push(str[i]);
-        //   }
-
-        //   i = i + sum;
-        // }
-
-        console.log(result.join(""));
-      }
-
-      encodeLine("aabbbc");
-    </script>
+    <script></script>
   </body>
 </html>
