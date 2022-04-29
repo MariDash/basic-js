@@ -1,4 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError } = require("../extensions/index.js");
 
 /**
  * There's a list of file, since two files cannot have equal names,
@@ -15,11 +15,28 @@ const { NotImplementedError } = require('../extensions/index.js');
  * the output should be ["file", "file(1)", "image", "file(1)(1)", "file(2)"]
  *
  */
-function renameFiles(/* names */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+function renameFiles(names) {
+  for (let i = 1; i < names.length; i++) {
+    let sum = 0;
+    for (let j = 0; j < i; j++) {
+      if (names[j] == names[i]) {
+        sum += 1;
+      }
+    }
+    if (sum > 0) {
+      let newName = names[i] + `(${sum})`;
+
+      for (let j = 0; j < i; j++) {
+        if (names[j] == newName) {
+          newName = names[i] + `(${sum + 1})`;
+        }
+      }
+      names.splice(i, 1, newName);
+    }
+  }
+  return names;
 }
 
 module.exports = {
-  renameFiles
+  renameFiles,
 };
