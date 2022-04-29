@@ -7,33 +7,6 @@
     <title>Document</title>
   </head>
   <body>
-    <script>
-      function renameFiles(names) {
-        for (let i = 1; i < names.length; i++) {
-          console.log(names[i], "names[i]");
-          let sum = 0;
-          for (let j = 0; j < i; j++) {
-            console.log(names[j], "names[j]");
-            if (names[j] == names[i]) {
-              sum += 1;
-            }
-          }
-          console.log(sum, "sum");
-          if (sum > 0) {
-            let newName = names[i] + `(${sum})`;
-            console.log(newName, "newMane");
-
-            for (let j = 0; j < i; j++) {
-              if (names[j] == newName) {
-                newName = names[i] + `(${sum + 1})`;
-              }
-            }
-            names.splice(i, 1, newName);
-          }
-        }
-        console.log(names);
-      }
-      renameFiles(["doc", "doc", "image", "doc(1)", "doc"]);
-    </script>
+    <script></script>
   </body>
 </html>
